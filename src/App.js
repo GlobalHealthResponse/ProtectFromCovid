@@ -1,12 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { LanguageProvider } from './components/languageSelector/availableLanguageContext';
+import LanguageSelector from './components/languageSelector/languageSelector';
+import Homepage from './components/pages/homepage';
 
 function App() {
   return (
-    <div className="App">
-      App initiation
-    </div>
+    <LanguageProvider>
+      <div>
+        <header>
+          <LanguageSelector />
+        </header>
+        
+        <Homepage />
+      </div>
+    </LanguageProvider>
   );
 }
 
